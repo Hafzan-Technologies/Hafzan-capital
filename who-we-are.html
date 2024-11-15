@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Welcome to Hafzan Capital, your trusted partner in financial investment and wealth management. Explore our resources, market insights, and expert advice to navigate the financial landscape.">
+  <title>Hafzan Capital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Merriweather", serif;
+      font-weight: 300;
+      color: #2d2d2d;
+      background-color: #FFFFFF; /* Light Gray */
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #A36C3C;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #A36C3C; /* Golden Brown */
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #FFFFFF;
+      padding: 20px 10%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #A36C3C; 
+    }
+
+    
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul li {
+      padding: 10px;
+    }
+    nav ul li a {
+      color: #2d2d2d;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+    .menu-icon {
+      display: none; /* Initially hide on larger screens */
+      font-size: 2rem; /* Increase the size */
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu-icon {
+        display: block; /* Show on smaller screens */
+      }
+
+      nav ul {
+        display: none; /* Hide the navigation links */
+      }
+
+      nav ul.show-menu {
+        display: block; /* Show the menu when active */
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 20px;
+      }
+
+      nav ul li {
+        margin: 10px 0; /* Adjust spacing for mobile */
+      }
+    }
+
+    /* Hero Banner */
+    .banner {
+      background: url('') no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000000;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      background-color: #FFFFFF; 
+    }
+
+    /* Main Section */
+    .main-content {
+      padding: 50px 10%;
+    }
+    .main-content h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #FFFFFF; 
+    }
+    .cards {
+ display: flex;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .card {
+      flex: 1;
+      padding: 30px;
+      background-color: #FFFFFF;
+      border-radius: 0px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: #FFFFFF 2px solid;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #000000; /* Dark Blue */
+    }
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #666666;
+    }
+    .card a {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #A36C3C; /* Golden Brown */
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .card a:hover {
+      background-color: #FFFFFF;
+      color: #000000;
+    }
+
+    /* Button Styling */
+    .action-btn {
+      padding: 12px 20px;
+      background-color: #A36C3C; /* Golden Brown */
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .action-btn:hover {
+      background-color: #182D5F; /* Dark Blue */
+    }
+
+
+    /* Leadership Section */
+    .leadership-section {
+      padding: 50px 10%;
+      background-color: #FFFFFF; /* Muted Tan */
+    }
+    .leadership-section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #A36C3C; /* Dark Blue */
+    }
+    .leadership-cards {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .leadership-card {
+      flex: 1;
+      padding: 30px;
+      background-color: #FFFFFF;
+      border-radius: 0px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: #000000 2px solid;
+    }
+    .leadership-card:hover {
+      transform: translateY(-10px);
+    }
+    .leadership-card h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #000000; /* Dark Blue */
+    }
+    .leadership-card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #666666;
+    }
+
+
+    /* Footer */
+    .footer {
+      background-color: #000000; /* Dark Blue */
+      padding: 40px 10%;
+      color: white;
+      text-align: center;
+    }
+    .footer p {
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media(max-width: 1024px) {
+      .cards {
+        flex-direction: column;
+      }
+      .leadership-cards {
+        flex-direction: column;
+      }
+      .news-cards {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      document.querySelector('.menu-icon').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('show-menu');
+      });
+    };
+  </script>  
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"><a href="index.html">Hafzan Capital</a></div>
+    <nav>
+      <div class="menu-icon">
+        <i class="fa fa-bars"></i>
+      </div>      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="what-we-do.html">What We Do</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <!--section class="banner">
+    <div>Our Services</div>
+  </section-->
+
+
+  <!-- Leadership Section -->
+  <section class="leadership-section">
+    <h2>Who We Are - Hafzan Capital</h2>
+    <h1>Our Vision</h1></br>
+     <p>At Hafzan Capital, we envision a world where small and medium-sized enterprises (SMEs) have the resources, insights, and support they need to thrive. We believe that every business, regardless of its size, deserves access to high-quality financial services and market intelligence that empower them to make informed decisions and drive sustainable growth.</p>
+  </br>
+    </div>
+  </br>
+  <h1>Our Mission</h1></br>
+     <p>Our mission is to be the trusted partner for SMEs, providing them with innovative solutions and expert guidance that enable them to navigate the complexities of the business landscape. We are dedicated to fostering economic growth by equipping our clients with the tools and knowledge they need to succeed.</p>
+  </br>
+  </div>
+  </br>
+  <h1>Who We Are</h1></br>
+     <p>Hafzan Capital is a dynamic financial services firm that specializes in serving small and medium-sized enterprises. Founded by a team of industry veterans with a passion for empowering businesses, we understand the unique challenges that SMEs face in today’s fast-paced and ever-changing market.</p>
+  </br>
+     <p>Our team combines years of experience in finance, market research, and technology to deliver comprehensive solutions tailored specifically for SMEs. We are committed to building long-lasting relationships with our clients, understanding their unique needs, and working collaboratively to help them achieve their goals.</p>
+  </br>
+  </div>
+  </br>
+     <h1>Our Core Values</h1>
+     </br>
+  </div>
+    </br>
+      <!-- Leadership Card 1 -->
+      <div class="leadership-card">
+        <h3>Integrity</h3>
+        <p>We believe in conducting our business with the highest ethical standards. Transparency and honesty are at the core of our operations, ensuring that our clients can trust us as their financial partner.</p>
+      </div>
+    </div>
+</br>
+</br>
+  <div class="leadership-card">
+    <h3>Innovation</h3>
+    <p>We embrace innovation and continuously seek new ways to enhance our services. By leveraging advanced technology and data analytics, we provide our clients with cutting-edge solutions that drive results.</p>
+  </div>
+</br>
+</br>
+    <div class="leadership-card">
+      <h3>Collaboration</h3>
+      <p>We view our clients as partners. We listen to their needs, understand their challenges, and work together to develop customized strategies that align with their objectives.</p>
+    </div>
+  </br>
+</br>
+    <div class="leadership-card">
+      <h3>Empowerment</h3>
+      <p>Our goal is to empower SMEs with the knowledge and tools they need to make informed decisions. We provide resources, training, and support to help our clients grow and succeed.</p>
+    </div>
+  </br>
+</br>
+    <div class="leadership-card">
+      <h3>Excellence</h3>
+      <p>We are committed to delivering exceptional service and value to our clients. Our team strives for excellence in everything we do, from our client interactions to the solutions we provide.</p>
+    </div>
+</div>
+</br>
+</div>
+</br>
+  </section>
+<section class="main-content" style="background-color: #FFFFFF; border: #000000 2px solid;">
+  <h1>Choose Hafzan Capital?</h1></br>
+<p>Choosing Hafzan Capital means partnering with a firm that genuinely cares about your success. We understand that SMEs are the backbone of the economy, and we are dedicated to providing the support and resources necessary for your business to flourish. Our tailored solutions, expert guidance, and commitment to excellence set us apart as a trusted partner for your financial needs.</p>
+</section>
+<section class="main-content" style="background-color: #000000; color: #FFFFFF;">
+<i>At Hafzan Capital, we are more than just a financial services provider; we are your partners in growth. Together, let’s unlock the potential of your business and pave the way for a successful future.</i>
+</section>
+<section class="main-content" style="background-color: #FFFFFF; border-top: #000000 2px solid;">
+  <h1>Get in Touch</h1>
+  
+  We invite you to learn more about our services and how Hafzan Capital can support your business. Whether you are looking for market intelligence, financial advisory, or data solutions, our team is here to help you every step of the way.
+  </section>
+  <!-- Call-to-Action Section -->
+  <section style="text-align: center; padding: 50px 10%; background-color: #FFFFFF;">
+    <h2></h2>
+    <p></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Hafzan Capital | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
